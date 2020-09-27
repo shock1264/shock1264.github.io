@@ -1,0 +1,17 @@
+{
+    "short_name": "Shock",
+    "name": "Shock Official Website",
+    "description": "Buy gadgets and CDs",
+    "icons": [
+      {
+        "src": "res/icon.png",
+        "type": "image/png",
+        "purpose": "maskable",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "index.html",
+    "background_color": "#212121",
+    "display": "standalone",
+    "theme_color": "#212121"
+  }
