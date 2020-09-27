@@ -12,10 +12,26 @@
       flex: 1 0 auto;
     }
 
-    #spreadshirt {
-      width: 100%;
-      height: 600vh;
-      border: 0;
+    .sprd-skip-nav, .sprd-burgermenu, .sprd-header__title, #sprd-mobile-navigation {
+      display: none;
+    }
+
+    .sprd-header {
+      height: 42px;
+    }
+
+    .sprd-breadcrumb {
+      background-color: white;
+    }
+
+    .shop nav {
+      background: white;
+      height: 16px;
+      box-shadow: none;
+    }
+
+    .sprd-cookie-banner {
+      display: none;
     }
   </style>
 
@@ -86,9 +102,24 @@
 
     </div>
 
-    <div id="shop" class="col s12">
+    <div id="shop" class="col s12 shop">
 
-      <iframe src="https://shop.spreadshirt.it/shock/all" id="spreadshirt"></iframe>
+      <div id="myShop">
+        <a href="https://shop.spreadshirt.it/shock/all">shock</a>
+      </div>
+    
+      <script>
+        var spread_shop_config = {
+            shopName: 'shock',
+            locale: 'it_IT',
+            prefix: 'https://shop.spreadshirt.it',
+            baseId: 'myShop'
+        };
+      </script>
+    
+      <script type="text/javascript"
+        src="https://shop.spreadshirt.it/shopfiles/shopclient/shopclient.nocache.js">
+      </script>
 
     </div>
 
@@ -139,9 +170,9 @@
       </div>
 
     </div>
-    
+
     <div class="fixed-action-btn click-to-toggle">
-      <a class="btn-floating waves-effect waves-dark btn-large teal">
+      <a class="btn-floating waves-effect waves-dark btn-large teal ">
         <i class="large material-icons">favorite</i>
       </a>
       <ul>
@@ -175,13 +206,6 @@
           document.getElementById('test-form').style.display = "none";
           document.getElementById('thanks').style.display = "block";
         }
-      }
-
-      document.getElementById('spreadshirt').addEventListener('load', heightshop);
-
-      function heightshop() {
-        var iframe = document.getElementById('spreadshirt');
-          iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
       }
 
     </script>
