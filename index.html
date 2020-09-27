@@ -27,7 +27,8 @@
 
     .shop nav {
       background: white;
-      height: 16px;
+      font-size: 20px;
+      height: 32px;
       box-shadow: none;
     }
 
@@ -59,7 +60,7 @@
 
     <!-- Social Media Preview -->
     <meta property="og:title" content="Shock Official Website">
-    <meta property="og:description" content="Buy gadgets and CDs">
+    <meta property="og:description" content="Acquista maglie, gadget e CD">
     <meta property="og:image" content="res/icon.png">
     <meta property="og:url" content="shock1264.github.io">
     <meta name="twitter:card" content="summary_large_image">
@@ -76,7 +77,7 @@
       <ul class="tabs tabs-fixed-width tabs-transparent center">
         <li class="tab"><a class="active" href="#home">Home</a></li>
         <li class="tab"><a href="#shop">Shop</a></li>
-        <li class="tab"><a href="#discography">Discography</a></li>
+        <li class="tab"><a href="#discography">Dischi</a></li>
       </ul>
     </div>
   </nav>
@@ -110,7 +111,11 @@
     <div id="shop" class="col s12 shop">
 
       <div id="myShop">
-        <a href="https://shop.spreadshirt.it/shock"></a>
+        <a href="https://shop.spreadshirt.it/shock">
+          <div class="progress">
+            <div class="indeterminate"></div>
+          </div>
+        </a>
       </div>
     
       <script>
@@ -137,14 +142,16 @@
               <div class="row">
                 <div class="row">
                   <span class="col s12">
-                    <h3>
-                      Buy my CDs
-                    </h3>
-                    This section is temporarily unavailable. Please subscribe to the mail list to be notified when CDs sale will begin.
+                    <h5>
+                      Acquista i miei CD
+                    </h5>
+                    Questa sezione è attualmente non disponibile. Puoi prenotarti
+                    compilando il form sottostante. Al raggiungimento di un numero appropriato
+                    di richieste, sarai informato quando la vendita dei CD diverrà attiva.
                     <div id="thanks" style="display: none;">
                       <span class="row green-text">
                         <i class="large material-icons">done</i>
-                        <h5>Thank you for your subscription.</h5>
+                        <h5>Grazie per l'iscrizione.</h5>
                       </span>
                     </div>
                   </span>
@@ -154,7 +161,7 @@
                     <div class="input-field col s12">
                       <i class="material-icons prefix">account_circle</i>
                       <input id="name" type="text" class="validate" name="Name" required>
-                      <label for="name">Name</label>
+                      <label for="name">Nome e cognome</label>
                     </div>
                   </div>
                   <div class="row">
@@ -164,7 +171,7 @@
                       <label for="email">Email</label>
                     </div>
                   </div>
-                  <button class="btn waves-effect waves-light right" type="submit" id="submit-form">Submit
+                  <button class="btn waves-effect waves-light right" type="submit" id="submit-form">Invia
                     <i class="material-icons right">send</i>
                   </button>
                 </form>
@@ -221,7 +228,7 @@
     <div class="footer-copyright">
       <div class="container center">
         <a class="grey-text text-lighten-4" target="_blank" href="https://instagram.com/peppe_rossi">
-          &copy; 2020 All rights reserved<br>
+          &copy; 2020 Tutti i diritti riservati<br>
           Website made by <b>Giuseppe Rossi</b>
         </a>
       </div>
