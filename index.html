@@ -36,10 +36,17 @@
     }
 
     #shopping-cart {
-      right: 22px;
+      right: 16px;
       top: 12px;
       position: absolute;
       z-index: 12;
+    }
+
+    #spinner-shop {
+      margin-right: auto;
+      margin-left: auto;
+      top: 36px;
+      bottom: 24px;
     }
 
     .sprd-breadcrumb {
@@ -53,7 +60,7 @@
     #myShop nav {
       padding-top: 12px;
       padding-left: 2px;
-      padding-right: 58px;
+      padding-right: 56px;
       padding-bottom: 52px;
       background: white;
       font-size: 22px;
@@ -148,14 +155,14 @@
         <div class="col s12 m7">
           <div class="card white">
             <div id="shopping-cart">
-              <a class="btn-floating btn-large purple darken-1"
+              <a class="btn-floating waves-effect waves-light btn-large purple darken-1"
                 href="#!/basket">
                 <i class="large material-icons">shopping_cart</i>
               </a>
             </div>
             <div id="myShop">
               <a href="https://shop.spreadshirt.it/shock">
-                <div class="preloader-wrapper big active">
+                <div class="preloader-wrapper big active" id="spinner-shop">
                   <div class="spinner-layer">
                     <div class="circle-clipper left">
                       <div class="circle"></div>
@@ -238,7 +245,7 @@
     </div>
 
     <div class="fixed-action-btn click-to-toggle">
-      <a class="btn-floating waves-effect waves-dark btn-large teal">
+      <a class="btn-floating waves-effect waves-light btn-large teal">
         <i class="large material-icons">favorite</i>
       </a>
       <ul>
