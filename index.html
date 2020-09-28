@@ -161,8 +161,8 @@
       <div class="row">
         <div class="col s12 m7">
           <div class="card grey darken-4">
-            <div class="card-content white-text">
-              <iframe src="https://open.spotify.com/embed/artist/0kB9X6iBgtpeqJ1n5eZYPo" width="100%" height="480" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <div class="card-content">
+              <iframe class=" white-text" src="https://open.spotify.com/embed/artist/0kB9X6iBgtpeqJ1n5eZYPo" width="100%" height="480" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
           </div>
         </div>
@@ -275,34 +275,6 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
 
-    <script>
-
-      document.getElementById('submit-form').addEventListener('click', send);
-
-      function send(e) {
-
-        e.preventDefault();
-
-        var theUrl = 'https://script.google.com/macros/s/AKfycbz_Y81NT0zKIIGw_czQjdYODH5FA-IVbDCJn4I-s2zuRkhOv_A/exec';
-
-        var name = document.getElementById('name');
-        var email = document.getElementById('email');
-        if(name.checkValidity() && email.checkValidity()){
-          var xhttp = new XMLHttpRequest();
-          xhttp.open("GET", theUrl + '?Name=' + name.value + '&Email=' + email.value, true);
-          xhttp.send();
-          document.getElementById('test-form').style.display = "none";
-          document.getElementById('thanks').style.display = "block";
-        }
-      }
-
-      window.addEventListener('load', loaded);
-
-      function loaded() {
-        document.getElementById('loading').style.display = "none";
-      }
-    </script>
-
   </main>
 
   <footer class="page-footer grey darken-4">
@@ -315,6 +287,34 @@
       </div>
     </div>
   </footer>
+
+  <script>
+
+    document.getElementById('submit-form').addEventListener('click', send);
+
+    function send(e) {
+
+      e.preventDefault();
+
+      var theUrl = 'https://script.google.com/macros/s/AKfycbz_Y81NT0zKIIGw_czQjdYODH5FA-IVbDCJn4I-s2zuRkhOv_A/exec';
+
+      var name = document.getElementById('name');
+      var email = document.getElementById('email');
+      if(name.checkValidity() && email.checkValidity()){
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", theUrl + '?Name=' + name.value + '&Email=' + email.value, true);
+        xhttp.send();
+        document.getElementById('test-form').style.display = "none";
+        document.getElementById('thanks').style.display = "block";
+      }
+    }
+
+    window.addEventListener('load', loaded);
+
+    function loaded() {
+      document.getElementById('loading').style.display = "none";
+    }
+  </script>
 
 </body>
 </html>
