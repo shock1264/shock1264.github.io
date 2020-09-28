@@ -28,36 +28,45 @@
     }
 
     .sprd-header__actions {
-      transform: translateX(86vw);
-      height: 52px;
+      height: 0px;
+    }
+
+    #sprd-basket {
+      display: none;
+    }
+
+    #shopping-cart {
+      right: 22px;
+      top: 12px;
+      position: absolute;
+      z-index: 12;
     }
 
     .sprd-breadcrumb {
       background-color: white;
     }
 
-    #shop {
-      background-color: white;
-      padding-bottom: 48px;
+    #myShop {
+      padding-bottom: 16px;
     }
 
-    #shop nav {
+    #myShop nav {
+      padding-top: 12px;
+      padding-left: 2px;
+      padding-right: 52px;
+      padding-bottom: 46px;
       background: white;
       font-size: 22px;
-      height: 38px;
+      height: 22px;
       box-shadow: none;
-    }
-
-    .sprd-cookie-banner__text {
-      display: none;
     }
 
     .sprd-footer {
       display: none;
     }
 
-    .sprd-filterpane-sections {
-      color: black;
+    .sprd-cookie-banner__text {
+      display: none;
     }
     
   </style>
@@ -134,14 +143,25 @@
 
     </div>
 
-    <div id="shop" class="col s12 white">
-
-      <div id="myShop">
-        <a href="https://shop.spreadshirt.it/shock">
-          <div class="progress">
-            <div class="indeterminate black-text"></div>
+    <div id="shop" class="col s12">
+      <div class="row">
+        <div class="col m7">
+          <div class="card white">
+            <div id="shopping-cart">
+              <a class="btn-floating btn-large purple darken-1"
+                href="#!/basket">
+                <i class="large material-icons">shopping_cart</i>
+              </a>
+            </div>
+            <div id="myShop">
+              <a href="https://shop.spreadshirt.it/shock">
+                <div class="progress">
+                  <div class="indeterminate"></div>
+                </div>
+              </a>
+            </div>
           </div>
-        </a>
+        </div>
       </div>
     
       <script>
@@ -210,8 +230,8 @@
     </div>
 
     <div class="fixed-action-btn click-to-toggle">
-      <a class="btn-floating waves-effect waves-dark btn-large teal ">
-        <i class="large material-icons">favorite</i>
+      <a class="btn-floating waves-effect waves-dark btn-large grey lighten-2">
+        <i class="large material-icons grey-text text-darken-4">favorite</i>
       </a>
       <ul>
         <li><a class="btn-floating waves-effect waves-light btn-large green" target="_blank"
